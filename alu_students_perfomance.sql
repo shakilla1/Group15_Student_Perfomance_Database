@@ -86,3 +86,9 @@ AND student_id NOT IN (
     INTERSECT
     SELECT student_id FROM python_grades
 );
+
+-- Students who took both Linux and Python
+SELECT s.student_id, s.student_name
+FROM students s
+JOIN linux_grades l ON s.student_id = l.student_id
+JOIN python_grades p ON s.student_id = p.student_id;
