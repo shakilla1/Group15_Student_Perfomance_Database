@@ -63,7 +63,13 @@ INSERT INTO python_grades VALUES
 (207, 'Python Programming', 12, 88.00),
 (208, 'Python Programming', 13, 53.00),
 (209, 'Python Programming', 14, 49.00),
-(210, 'Python Programming', 15, 75.00);
+
+SELECT s.student_id, s.student_name, l.grade_obtained
+FROM students s
+JOIN linux_grades l ON s.student_id = l.student_id
+WHERE l.grade_obtained < 50;
+
+
 
 # Queries
 
