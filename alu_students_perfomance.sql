@@ -18,9 +18,9 @@ CREATE TABLE python_grades (
     student_id INT,
     grade_obtained DECIMAL(5, 2),
     FOREIGN KEY (student_id) REFERENCES students(student_id) 
-)
+);
 
-Insert the sample data 
+--Insert the sample data 
 -- Insert Students
 INSERT INTO students VALUES
 (1, 'Alice Mugenzi', 2023),
@@ -39,7 +39,7 @@ INSERT INTO students VALUES
 (14, 'Peter Kamanzi', 2024),
 (15, 'Queen Umutoni', 2023);
 
-Insert Linux Grades (Some students only)
+--Insert Linux Grades (Some students only)
 INSERT INTO linux_grades VALUES
 (101, 'Linux Fundamentals', 1, 45.00),
 (102, 'Linux Fundamentals', 2, 78.00),
@@ -52,7 +52,7 @@ INSERT INTO linux_grades VALUES
 (109, 'Linux Fundamentals', 12, 77.00),
 (110, 'Linux Fundamentals', 15, 62.00);
 
-Insert Python Grades (Some students only)
+--Insert Python Grades (Some students only)
 INSERT INTO python_grades VALUES
 (201, 'Python Programming', 1, 67.00),
 (202, 'Python Programming', 3, 84.00),
@@ -65,7 +65,7 @@ INSERT INTO python_grades VALUES
 (209, 'Python Programming', 14, 49.00),
 (210, 'Python Programming', 15, 75.00);
 
-# Queries
+--Queries
 
 -- Students with Linux grade below 50%
 SELECT s.student_id, s.student_name, l.grade_obtained
@@ -83,8 +83,7 @@ WHERE student_id IN (
 )
 AND student_id NOT IN (
     SELECT student_id FROM linux_grades
-    INTERSECT
-    SELECT student_id FROM python_grades
+WHERE student_id IN (SELECT student_id FROM python_grades)
 );
 
 -- Students who took both Linux and Python
