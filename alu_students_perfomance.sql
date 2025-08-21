@@ -18,4 +18,4 @@ CREATE TABLE python_grades (
     student_id INT,
     grade_obtained DECIMAL(5, 2),
     FOREIGN KEY (student_id) REFERENCES students(student_id) 
-);
+)
