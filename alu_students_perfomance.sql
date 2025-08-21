@@ -92,3 +92,11 @@ SELECT s.student_id, s.student_name
 FROM students s
 JOIN linux_grades l ON s.student_id = l.student_id
 JOIN python_grades p ON s.student_id = p.student_id;
+
+-- Average Linux grade
+SELECT 'Linux' AS course, AVG(grade_obtained) AS avg_grade
+FROM linux_grades
+UNION
+-- Average Python grade
+SELECT 'Python' AS course, AVG(grade_obtained) AS avg_grade
+FROM python_grades;
