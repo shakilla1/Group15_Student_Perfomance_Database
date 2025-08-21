@@ -63,7 +63,8 @@ INSERT INTO python_grades VALUES
 (207, 'Python Programming', 12, 88.00),
 (208, 'Python Programming', 13, 53.00),
 (209, 'Python Programming', 14, 49.00),
-(210, 'Python Programming', 15, 75.00);
+
+
 
 --Queries
 
@@ -86,7 +87,7 @@ AND student_id NOT IN (
 WHERE student_id IN (SELECT student_id FROM python_grades)
 );
 
--- Students who took both Linux and Python
+-- Students who took both courses
 SELECT s.student_id, s.student_name
 FROM students s
 JOIN linux_grades l ON s.student_id = l.student_id
@@ -112,3 +113,6 @@ JOIN students s ON s.student_id = g.student_id
 GROUP BY s.student_id, s.student_name
 ORDER BY average_score DESC
 LIMIT 1;
+
+
+
