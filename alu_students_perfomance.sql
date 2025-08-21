@@ -1,7 +1,7 @@
 CREATE TABLE students (
     student_id INT PRIMARY KEY,
     student_name VARCHAR(100) NOT NULL,
-    intake_year YEAR NOT NULL,
+    intake_year YEAR NOT NULL
 );
 
 CREATE TABLE linux_grades (
