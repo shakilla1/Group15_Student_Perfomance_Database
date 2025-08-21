@@ -38,3 +38,17 @@ INSERT INTO students VALUES
 (13, 'Maria Nshuti', 2023),
 (14, 'Peter Kamanzi', 2024),
 (15, 'Queen Umutoni', 2023);
+
+Insert Linux Grades (Some students only)
+INSERT INTO linux_grades VALUES
+(101, 'Linux Fundamentals', 1, 45.00),
+(102, 'Linux Fundamentals', 2, 78.00),
+(103, 'Linux Fundamentals', 3, 55.00),
+(104, 'Linux Fundamentals', 4, 68.00),
+(105, 'Linux Fundamentals', 5, 49.00),
+(106, 'Linux Fundamentals', 7, 90.00),
+(107, 'Linux Fundamentals', 8, 81.00),
+(108, 'Linux Fundamentals', 10, 35.00),
+(109, 'Linux Fundamentals', 12, 77.00),
+(110, 'Linux Fundamentals', 15, 62.00);
+
