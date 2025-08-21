@@ -65,4 +65,11 @@ INSERT INTO python_grades VALUES
 (209, 'Python Programming', 14, 49.00),
 (210, 'Python Programming', 15, 75.00);
 
+# Queries
+
+-- Students with Linux grade below 50%
+SELECT s.student_id, s.student_name, l.grade_obtained
+FROM students s
+JOIN linux_grades l ON s.student_id = l.student_id
+WHERE l.grade_obtained < 50;
 
