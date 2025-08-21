@@ -52,3 +52,17 @@ INSERT INTO linux_grades VALUES
 (109, 'Linux Fundamentals', 12, 77.00),
 (110, 'Linux Fundamentals', 15, 62.00);
 
+Insert Python Grades (Some students only)
+INSERT INTO python_grades VALUES
+(201, 'Python Programming', 1, 67.00),
+(202, 'Python Programming', 3, 84.00),
+(203, 'Python Programming', 6, 40.00),
+(204, 'Python Programming', 7, 95.00),
+(205, 'Python Programming', 9, 59.00),
+(206, 'Python Programming', 11, 72.00),
+(207, 'Python Programming', 12, 88.00),
+(208, 'Python Programming', 13, 53.00),
+(209, 'Python Programming', 14, 49.00),
+(210, 'Python Programming', 15, 75.00);
+
+
